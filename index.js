@@ -1,7 +1,7 @@
 function showRepositories(event, data) {
   //this is set to the XMLHttpRequest object that fired the event
   console.log(this.responseText)
-  var repos = JSON.parse(this.responseText)
+  let repos = JSON.parse(this.responseText)
   console.log(repos)
   const repoList = `<ul>${repos.map(r => '<li>' + r.name + '</li>').join('')}</ul>`
   document.getElementById("repositories").innerHTML = repoList
